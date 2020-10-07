@@ -1,0 +1,45 @@
+extends admin-layout
+
+block mainbody
+  .buttons
+    h1 AFRISANTE
+    p
+    form(method='POST' action='/admin/create/announce')
+      button.add(type="submit")
+        .icon &plus;
+        p New
+  each test50 in test50s
+    hr
+    form(method='POST' action='/admin/update/announce')
+      table
+        tr
+          th.label #{test50['id']}
+          th #{test50['nom']}
+        each value, field in test50
+          if field != 'id'
+            - var inputId = "_" + test50['id'] + "_" + field;
+            - var useToday = "document.getElementById('_" + test50['id']
+            - useToday += "_" + field + "').value=todayString()";
+            tr
+              td.label: label(for=field) #{field}:
+              if field == 'description'
+                td: textarea(name=field id=inputId)
+                  =test50[field]
+              else
+                td.buttons
+                  if field == 'fax'
+                    input(type="text", size=18, name=field, value=test50[field] id=inputId)
+                    p
+                  else
+                    input(type="text", size=28, name=field, value=test50[field] id=inputId)
+        tr.norule
+          td: input(type="hidden" name="id" value=test50['id'])
+          td.buttons
+            button.update(type="submit" name="update")
+              .icon &check;
+              p Update
+            .space
+            button.delete(name="action" value="delete" onclick="return confirm('Are you sure?')")
+              .icon X
+              p Delete
+    p

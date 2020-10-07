@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/javascripts/menu.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="./mvp.css" />
+  
+  </head>
+  <body>
+    <div id="menu">
+      <section id="menuitems">
+        <div class="menubutton">
+          <h1 class="menubutton" onclick="menuToggle('hide')">&#9776;</h1><a href="/about"></a>
+        </div>
+      </section>
+    </div>
+    <div id="container" onmouseup="menuToggle('hide')">
+      <div id="header">
+          <h1 class="logo">ASSAB WebPortail</h1></a>
+        <div class="headspace"></div>
+        <h1 class="menubutton" onclick="menuToggle('show')">&#9776;</h1>
+        <h1 class="placeholder">&#9776;</h1>
+        <h2 class="navitem"></h2>
+      </div>
+      <div class="left" id="panel">
+
+        <section id="sections"><a class="sectionlink" href="/admin/announce">
+            <p>Modifier votre structure</p></a></section>
+        <section id="sections"><a class="sectionlink" href="/admin/announce2">
+            <p>Ajouter une structure</p></a></section>
+      </div>
+      <div id="mainbody">
+        <section>
+          Bienvenu AFRISANTE !
+        </section>
+      </div>
+      <div id="footer">
+        <p>Copyright &copy; 2020 ASSAB &amp; BMPM Marseille</p>               <a href="/sessionLogout">  Deconnexion</a>
+
+      </div>
+    </div>
+  </body>
+</html>
+
+</style>

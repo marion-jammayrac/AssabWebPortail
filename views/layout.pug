@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title=pagetitle
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src="/javascripts/menu.js")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+  body
+    #menu
+      section#menuitems
+        .menubutton
+          h1.menubutton(onclick="menuToggle('hide')") &#9776;
+          a(href="/about")
+        a(href="/about")
+          h3.sectrule About Us
+    #container(onmouseup="menuToggle('hide')")
+      #header
+        a(href="/about")
+          h1.logo ASSAB WebPortail
+        .headspace
+        h1.menubutton(onclick="menuToggle('show')") &#9776;
+        h1.placeholder &#9776;
+        h2.navitem
+          a(href="/about")
+            .clickable-area Deconnexion
+      #panel.left
+        section#sections
+          a.sectionlink(href="/admin/announce")
+            p Modifier votre structure
+        section#sections
+          a.sectionlink(href="/admin/announce")
+            p Structure 2
+      #mainbody
+        section
+          block mainbody
+      #footer
+        p Copyright &copy; 2020 ASSAB &amp; BMPM Marseille

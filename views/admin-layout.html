@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/javascripts/menu.js"></script>
+    <script src="/javascripts/datestring.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <section id="menuitems">
+            <div class="menubutton">
+                <h1 class="menubutton" onclick="menuToggle('hide')">&#9776;</h1>
+            </div>
+            <p></p>
+            <a href="/about">
+                <h3 class="sectrule">&rarr; Return </h3>
+            </a>
+        </section>
+    </div>
+    <div id="container" onmouseup="menuToggle('hide')">
+        <div id="header">
+            <a href="/admin">
+                <h1 style="padding-left: 0">Control Panel</h1>
+            </a>
+            <div class="headspace"></div>
+            <h1 class="menubutton" onclick="menuToggle('show')">&#9776;</h1>
+            <h1 class="placeholder">&#9776;</h1>
+            <a href="/about">
+                <h2 class="navitem">&rarr; Menu</h2>
+            </a>
+        </div>
+        <div class="left" id="panel">
+            <section id="sections"></section>
+        </div>
+        <div id="mainbody"></div>
+        <div class="right" id="panel"></div>
+        <div id="footer">
+            <p>Copyright &copy; 2020 ASSAB &amp; TEST</p>
+        </div>
+    </div>
+</body>
+
+</html>
